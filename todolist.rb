@@ -25,7 +25,7 @@ class TodoList
     puts @title
     puts "-"*10
     @items.each do |item|
-      puts (@items.index(item) + 1).to_s + " - " + item.description + (item.importance == "High" ? " *" : "") + "\tCompleted: " + item.completed_status.to_s + "    Due date: " + item.due_date
+      puts (@items.index(item) + 1).to_s + item.format_list
     end
     puts
   end
@@ -36,7 +36,7 @@ class TodoList
     todo_file.puts @title
     todo_file.puts "-"*10
     @items.each do |item|
-      todo_file.puts (@items.index(item) + 1).to_s + " - " + item.description + (item.importance == "High" ? "*" : "") + "\tCompleted: " + item.completed_status.to_s + "    Due date: " + item.due_date
+      todo_file.puts (@items.index(item) + 1).to_s + item.format_list
     end
     todo_file.puts
   end
@@ -55,7 +55,7 @@ class Item
    end
 
    def is_completed?
-     @completed_status == true ? true : false
+     @completed_status
    end
 
    def set_high_importance
@@ -63,12 +63,15 @@ class Item
    end
 
    def change_status
-     is_completed? ? @completed_status = false : @completed_status = true
+     @completed_status = !@completed_status
    end
 
    def set_due_date(due)
      @due_date = due
    end
 
+   def format_list
+     " - " + @description + (@importance == "High" ? "*" : "") + "\tCompleted:  " + @completed_status.to_s + "\t\tDue date: " + @due_date
+   end
 
 end

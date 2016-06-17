@@ -1,7 +1,8 @@
 ----------
 Groceries
 ----------
-1 - Milk	Completed: false    Due date: Today
-2 - Nuts	Completed: false    Due date: Today
-3 - Eggs	Completed: false    Due date: Today
-4 - Soda	Completed: false    Due date: Today
+1 - Milk	Completed:  false		Due date: Today
+2 - Nuts	Completed:  false		Due date: Today
+3 - Eggs	Completed:  false		Due date: Today
+4 - Soda	Completed:  false		Due date: Today
+

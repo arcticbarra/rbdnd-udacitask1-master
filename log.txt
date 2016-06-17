@@ -1,0 +1,23 @@
+commit e686513d8c861624ade9e9e055b5ea2fdf5d2b22
+Author: Enrique Barragan <ebarragan1997@gmail.com>
+Date:   Thu Jun 16 20:26:22 2016 -0500
+
+    Added 3 extra features.
+
+commit df178145977d91340ee0d5fe1afe6445ee417256
+Author: Enrique Barragan <ebarragan1997@gmail.com>
+Date:   Thu Jun 16 19:30:06 2016 -0500
+
+    Finished initial implementation.
+
+commit 62e8b34eb89a0840ba98390714687a396d67d4cb
+Author: Enrique Barragan <ebarragan1997@gmail.com>
+Date:   Thu Jun 16 19:00:32 2016 -0500
+
+    Added grocery list with four items.
+
+commit 7bac858fefb837b4e2dba30dd2f506a63b92fdf0
+Author: Enrique Barragan <ebarragan1997@gmail.com>
+Date:   Thu Jun 16 17:58:43 2016 -0500
+
+    Initial commit, finished TodoList and Item class.
