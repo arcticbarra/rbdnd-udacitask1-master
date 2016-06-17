@@ -10,37 +10,30 @@ groceries.add_item("Eggs")
 groceries.add_item("Soda")
 
 # Print the list
-def print_list(list)
-  puts "-"*10
-  puts list.title
-  puts "-"*10
-  list.items.each do |item|
-    puts (list.items.index(item) + 1).to_s + " - " + item.description + "\tCompleted: " + item.completed_status.to_s
-  end
-end
-
-print_list(groceries)
+groceries.print_list
+groceries.save_to_file
 
 # Delete the first item
-groceries.items.delete_at(0)
+groceries.delete_item(0)
 
 # Print the list
-print_list(groceries)
+groceries.print_list
 
 # Delete the second item
-groceries.items.delete_at(1)
+groceries.delete_item(1)
 
 # Print the list
-print_list(groceries)
+groceries.print_list
 
 # Update the completion status of the first item to complete
-groceries.items[0].is_completed?
+groceries.items[0].change_status
+groceries.items[1].set_high_importance
 
 # Print the list
-print_list(groceries)
+groceries.print_list
 
 # Update the title of the list
-groceries.title = "Stuff to buy"
+groceries.change_title("Stuff to buy")
 
 # Print the list
-print_list(groceries)
+groceries.print_list
