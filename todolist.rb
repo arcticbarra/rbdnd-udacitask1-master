@@ -1,6 +1,6 @@
 class TodoList
   attr_reader :title, :items
-
+  attr_writer :title
   def initialize(list_title)
       @title = list_title
       @items = Array.new
@@ -21,4 +21,7 @@ class Item
       @completed_status = false
    end
 
+   def is_completed?
+     @completed_status == true ? @completed_status = false : @completed_status = true
+   end
 end
